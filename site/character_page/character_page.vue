@@ -692,8 +692,9 @@
 
     .character-images {
         column-width: auto;
-        column-count: 2;
         column-gap: 0.5rem;
+        /* Default; also set in _character_page.scss */
+        column-count: 2;
 
         .character-image-wrapper {
             display: inline-block;

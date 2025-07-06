@@ -135,6 +135,25 @@
 
 // Character Images
 .character-images {
+    @media (max-width: 350px) {
+        column-count: 1;
+    }
+    /* @media (min-width: breakpoint-min(xs)) {} */
+    /* xs is the default styling on bs4 */
+    column-count: 2;
+    @media (min-width: breakpoint-min(sm)) {
+        column-count: 3;
+    }
+    @media (min-width: breakpoint-min(md)) {
+        column-count: 3;
+    }
+    @media (min-width: breakpoint-min(lg)) {
+        column-count: 4;
+    }
+    @media (min-width: breakpoint-min(xl)) {
+        column-count: 5;
+    }
+
   .character-image {
     @extend .img-thumbnail;
     vertical-align: middle;
