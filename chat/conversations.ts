@@ -1064,7 +1064,8 @@ export default function(this: any): Interfaces.State {
         if(!core.state.settings.eventMessages || conv !== state.selectedConversation) await conv.addMessage(message);
     });
     connection.onMessage('TPN', (data) => {
-        const conv = state.privateMap[data.character.toLowerCase()];
+        const char = core.characters.get(data.character);
+        const conv = state.getPrivate(char);
         if(conv !== undefined) conv.typingStatus = data.status;
     });
     connection.onMessage('CBU', async(data, time) => {
